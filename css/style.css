@@ -1,0 +1,253 @@
+/* обнуление стилей*/
+
+/*отчищает все отступы и границы*/
+*{
+  padding: 0; 
+  margin:  0;
+  border:  0;
+}
+
+/*меняет алгоритм расчета ширинны блока, ширина считается по границе блока, не включая padding и margin*/
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*убирает линии ободки в некоторых браузерах*/
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+/*делает теги блочными*/
+nav,footer,header,aside{display: block;}
+
+/*выравнивает поведение шрифтов*/
+html,body{
+  height:    100%;
+  width:     100%;
+  font-size: 100%;
+  line-height:  1;
+  -ms-text-size-adjust:     100%;
+  -moz-text-size-adjust:    100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*добавляет наследование шрифта*/
+input,button,textarea{font-family: inherit;}
+
+/*убирает некоторые особенности браузеров*/
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul,li{list-style: none;}
+img{vertical-align: top;}
+
+/*обнуляет заголовки*/
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
+
+
+
+/*стили для кастомных классов*/
+.container_css_class{
+  background-color: #36D789;
+  padding: 5px 0px;
+  }
+
+/*управление стилями для вложенных элементов*/
+.container_css_class nav{color: green;}
+/*обращение к первому уровню вложнности*/
+.container_css_class>nav{color: purple; background-color: #36D999;}
+/*обращение к экземпляру класса*/
+footer.container_css_class{background-color: #596175;}
+
+/*работа со стилями текста*/
+body{
+  font-family: Roboto, sans-serif;
+  text-align: justify;
+  }
+nav{
+  text-align: center;
+  }
+footer{
+  height: 300px;
+  }
+h1{font-size: 24px; font-weight: 700; text-align: center; text-transform: uppercase;}
+h3{font-size: 18px; font-weight: 700; text-decoration: underline;}
+h6{font-size: 12px; font-style: italic; text-decoration: line-through;}
+/*тени: смещение по горизонтали, смещение по вертикали, размытие тени, цвет тени*/
+.shadows{text-shadow: 1px 1px 10px red;}
+/*добавляет красную строку*/
+.indent{text-indent: 25px;}
+/*расстояние между словами и буквами.
+свойство white-space со значением nowrap запрещает перенос*/
+.spacing{
+  font-size: 12px;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  white-space: normal;
+  line-height: 30px;
+}
+
+
+
+/*работа с блоками*/
+/*
+  padding работает с отступами внутри блока, 
+  margin — снаружи, 
+  border — граница блока, 
+  width — ширина блока
+  
+  padding/margin: отсуп сверху, отступ справа, отспуп снизу, отступ слева.
+  если значений 3, то отступ сверху, слева/справа, снизу.
+  если 2 — сверху/снизу, слева/справа.
+  если 1 — применяется ко всем сторонам.
+  
+  padding не может быть отрицательным, margin — может (позволяет выходить за границы родителя)!!
+  отступ может быть в процентах от размеров родителя!!!
+  не работают со строчными тегами!!!!
+*/
+.test_block{
+  max-width: 100%;
+  min-width: 100px;
+  max-height: 100px;
+  min-height: 50px;
+  overflow: auto;
+  padding: 10px 20px 10px 5px;
+  margin: 1% 5%;
+  border: 1px solid #000;
+}
+/*display управляет отображением:
+  значение block позволяет применить свойства блока к span,
+  значение inline действует наоборот,
+  значение inline-block делает что-то среднее, пока не особо пон
+  значение none позволяет отлючить отображение элемента на странице 
+  */
+.test_string{
+  margin: 20px;
+  width: 500px;
+  height: 100px;
+  max-width: 1000px;
+  border: 1px solid #000;
+  display: none; 
+}
+/*width умеет работать еще и с img*/
+img{
+  width: 100%;
+  max-width: 500px;
+  min-width: 50px;
+}
+.image{
+  margin: 5px 50px;
+}
+.shifted{
+  margin: 0 0 0 10px;
+  display: inline-block;
+}
+.gradiented{
+  background: linear-gradient(191.82deg, #234FC0 37.7%, rgba(54, 17, 100, 0.47) 100%);
+}
+.main{
+  margin: 0px 100px 0px;
+  padding: 70px 20px 5px;
+  background: white;
+}
+
+
+
+/*работа со свойствами*/
+button{
+  border: 1px solid #000; /*границы можно настраивать отдельно для каждой стороны*/
+  border-radius: 5px; /*делает скругление*/ 
+  box-shadow: 5px 5px 10px #001; /*смещение по горизонтали, смещение по вертикали, размытие тени, *ширина тени, цвет тени*/
+  opacity: 1; /*прозрачность*/
+  visibility: visible; /*видимость*/
+  padding: 5px;
+  background-color: #36D888;
+}
+/*кроме border можно сделать outline, окантовка будет за границей блока*/
+.circle_block{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+
+/*псевдоклассы*/
+.link:visited{/*действует когда ссылку посещали уже*/
+  color: purple;
+}
+.link:hover{ /*начинает действовать при наведении*/
+  color: blue;
+  text-decoration: underline;
+}
+button:hover{
+  color: white;
+  background-color: #36D700;
+}
+button:active{/*действует по нажатию*/
+  color: white;
+  background-color: yellow;
+}
+.textinput{
+  border: 1px solid #666;
+  padding: 5px;
+}
+.textinput:focus{ /*триггерится при использовании формы ввода*/
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+/*first-child,nth-child(n), last-child позволяют задавать стили для дочерних блоков без классов*/
+
+
+
+/*псевдоэлементы*/
+/*before и after добавляют псевдоэлемент до или после указанного элемента*/
+.list{
+  padding: 10px;
+}
+.list li:before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+}
+/*при сочетании псевдоклассов и псевдоэлементов в начале указывается псевдокласс!!!*/
+
+
+/*позиционнирование*/
+/*position: static; по умолчанию
+  position: relative; двигает относительно начальной позиции родителя
+  position: absolute; позиционирует элемент строго в указанной точке (при вкл. relative фиксируется относительно родителя)
+  position: fixed; фиксируется строго относительно окна браузера
+  z-index: ближе/дальше
+*/
+header{
+  position: fixed;
+  width: 100%;
+}
+.navigator{
+  padding: 5px;
+  width: 100%;
+  display: block;
+  opacity: 0;S
+}
+.navigator:hover{
+  width: 100%;
+  position: relative;
+  top: 20px;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+

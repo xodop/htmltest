@@ -1,0 +1,183 @@
+<!-- тип документа -->
+<!DOCTYPE html>
+<!-- оболочка с указанием языка -->
+<html lang="ru">
+
+  <!-- заголовок (не отображается на странице) -->
+  <head>
+    <title>заголовок (рядом с иконкой)</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset=UTF-8"/>
+    <meta http equiv="Content type" content="text/html"/>
+  </head>
+
+  <!-- тело (отображается в браузере) -->
+  <body>
+    <div class="gradiented">
+    
+      <header class="container_css_class">
+        <h1>Контейнер для шапки сайта, h1 это база (только один)</h1>
+        <nav class="navigator">
+          <span class="shifted">
+            nav контейнер для навигации по сайту
+          </span>
+          <span class="shifted">
+            div и span может быть внутри header,footer,nav
+          </span>
+        </nav>
+      </header>
+      
+      <div class="main">
+        <div>
+          <h3>заголовки размером от 1 до 6</h3>
+        </div>
+        
+        <div>
+          div основной строительный контейнер,
+          может быть несколько div
+        </div>
+        
+        <div>
+          содержимое каждого нового div с новой строки
+        </div>
+        
+        <h3>заголовки размером от 1 до 6</h3>
+        
+        <h6>заголовок может быть как внутри, так и снаружи</h6>
+        <p>
+          p создает блок-азбзац,
+          <span>span создает</span>
+          <span class="shadows">блок-текст</span>,
+          внутри span не может быть абзац!!!
+        </p>
+        <p>
+          <span>
+            <a class="link" target="_blank" href="https://youtu.be/MFgwNOILQfQ"> 
+              ссылка
+            </a>
+          </span>
+          (_blank = новая вкладка)
+          <br>
+            span чтобы выделять внутри строки
+        </p>
+        
+        делает перевод строки <br><br>
+        
+        <div class="circle_block">
+        <img src="img/pepega.png" alt="Ой:("/>
+        </div>
+        
+        <h3>Маркированный список</h3>
+        <ul class="list">
+          <li>элемент</li>
+          <li>элемент</li>
+        </ul>
+        
+        <h3>Нумированный список</h3>
+        <ol>
+          <li>элемент</li>
+          <li>элемент</li>
+        </ol>
+        <h3>Формы</h3>
+        <div class="shifted">
+          <!-- контейнер, описывающий форму для заполнения -->
+          <form action="#" method="post" enctype="multipart/form-data">
+            <div>
+              Username:<br>
+              <div class="indent"><input type="text" name="username"  placeholder="enter username" value="" /></div>
+              Password:<br>
+              <div class="indent"><input type="password" name="password" placeholder="enter password"  value="" /></div>
+            </div>
+        
+            <div>
+              <p>
+                Свитч:
+                <input type="radio" name="sex" value="male" /> 1
+                <input type="radio" name="sex" value="female" /> 2
+              </p>
+            </div>
+            
+            <div>
+              Флаги: 
+              <input type="checkbox" name="flag1" />
+              <input type="checkbox" checked name="flag2" />
+              <input type="checkbox" name="flag3" />
+              <input type="checkbox" name="flag4" />
+            </div>
+            <br>
+            
+            <div>
+              Файл: 
+              <input type="file" name="photo" />
+            </div>    
+            <br>
+            
+            <div>
+              Текстовое поле:<br>
+              <!-- cols и rows задают дефолтные размеры,обычно не нужны, т.к. есть JS -->
+              <textarea class="textinput" name="textarea" placeholder="enter text" cols="50" rows="4"></textarea>
+            </div>
+            <div>
+              Выпадающий список:<br>
+              <select name="selector">
+                <option selected value="red">опция 1</option>
+                <option value="green">опция 2</option>
+                <option value="yellow">опция 3 </option>          
+                <option value="blue">опция 4</option>
+              </select>
+              <br> 
+              
+              Множественный выбор:<br>        
+              <select multiple name="selector_multiple">
+                <option value="red">опция 1</option>
+                <option value="green">опция 2</option>
+                <option value="yellow">опция 3 </option>          
+                <option value="blue">опция 4</option>
+              </select>
+            </div> 
+            <br>
+            
+            <div>
+              Кнопки:
+              <button disabled name="button1" type="submit">Отправить форму</button>
+              <button name="button2" type="reset">Отчистить форму</button>        
+            </div>
+            
+          </form>
+        </div>
+        <br>
+        
+        <div class="spacing">
+          Для работы со стилями       
+          Для работы со стилями       
+          Для работы со стилями       
+          Для работы со стилями       
+          Для работы со стилями       
+          Для работы со стилями       
+          Для работы со стилями       
+          Для работы со стилями       
+        </div>
+        
+        <div class="test_block">
+          Блочный тег <br>
+          Для работы с блоками Для работы с блоками
+          Для работы с блоками Для работы с блоками
+          Для работы с блоками Для работы с блоками
+          Для работы с блоками Для работы с блоками
+          Для работы с блоками Для работы с блоками
+          Для работы с блоками Для работы с блоками
+          Для работы с блоками Для работы с блоками
+          Для работы с блоками Для работы с блоками
+          Для работы с блоками Для работы с блоками
+        </div>
+      </div>
+      
+      <footer class="container_css_class">
+        <h3>footer нижняя часть страницы</h3>
+      </footer>
+    </div>
+  </body>
+
+</html>
